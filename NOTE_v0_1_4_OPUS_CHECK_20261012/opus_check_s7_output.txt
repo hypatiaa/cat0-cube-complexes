@@ -1,0 +1,46 @@
+E1 m | phi(m) | rank image | rank K_m
+  1 1 1 0
+  2 1 1 1
+  3 2 2 1
+  4 2 2 2
+  5 4 4 1
+  6 2 2 4
+  7 6 6 1
+  8 4 4 4
+  9 6 6 3
+  10 4 4 6
+  11 10 10 1
+  12 4 4 8
+E1b m=1: image of (1) is (1,) (nonzero) => K_1 = 0, NOT Z(1)
+E2 m | 2^m | points | lost
+  1 2 2 0
+  2 4 4 0
+  3 8 8 0
+  4 16 15 1
+  5 32 32 0
+  6 64 53 11
+  7 128 128 0
+  8 256 189 67
+  9 512 490 22
+  10 1024 647 377
+  11 2048 2048 0
+  12 4096 1763 2333
+E3 m=1: antipode reflection holds: False; 2*xy = sum zeta^i W_i holds: False
+E3 m=2: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=3: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=4: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=5: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=6: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=7: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=8: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=9: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E3 m=10: antipode reflection holds: True; 2*xy = sum zeta^i W_i holds: True
+E4 30030 distinct points: 53
+E4 per level: {0: (1, 1), 1: (6, 6), 2: (15, 13), 3: (20, 13), 4: (15, 13), 5: (6, 6), 6: (1, 1)}
+E4 spine divisors: [1, 14, 33, 65, 110, 273, 462, 910, 2145, 30030] heights: [0, 2, 3, 4, 6]
+E4 points lost on spine: 5  off spine: 6  at Omega=3: 7
+E4 off-spine groups: [(42, 195), (66, 130), (70, 165), (154, 715), (182, 429), (231, 455)] levels [3]
+E4 non-disjoint union {0,3}u{0,2,4} = [0, 2, 3, 4] is zero-sum: False
+E4 k=2 seat sums of duads {0,3},{1,4},{2,5}: [(2, 0), (0, 2), (-2, -2)]
+N1 numerical: max|winding - positive| = 9.99e-16; max|global - conj(positive)| = 0.00e+00
+FAILURES: 0 []

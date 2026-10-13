@@ -1,0 +1,58 @@
+== B. f-vector table (enumeration / generating function / note formula) ==
+12 [(2, 2), (3, 1)] enum [6, 7, 2] chi 1 Omega 3 matches note: True
+30 [(2, 1), (3, 1), (5, 1)] enum [8, 12, 6, 1] chi 1 Omega 3 matches note: True
+360 [(2, 3), (3, 2), (5, 1)] enum [24, 46, 29, 6] chi 1 Omega 6 matches note: True
+900 [(2, 2), (3, 2), (5, 2)] enum [27, 54, 36, 8] chi 1 Omega 6 matches note: True
+6300 [(2, 2), (3, 2), (5, 2), (7, 1)] enum [54, 135, 126, 52, 8] chi 1 Omega 7 matches note: True
+30030 [(2, 1), (3, 1), (5, 1), (7, 1), (11, 1), (13, 1)] enum [64, 192, 240, 160, 60, 12, 1] chi 1 Omega 6 matches note: True
+
+== §2.1-§2.4 hyperplanes, crossing, Sageev, distance ==
+hyperplane/Sageev/distance checks done on [1, 2, 4, 6, 8, 12, 18, 30, 36, 60, 72, 210, 360, 900, 6300, 30030]
+
+== §3.1 median, §3.2 intervals ==
+median and interval checks done on [1, 2, 4, 6, 8, 12, 18, 30, 36, 60, 72, 210, 360, 900, 6300, 30030]
+
+== §3.2 convex subsets: exhaustive over all vertex subsets (tau <= 16) ==
+1 tau 1 convex vertex sets (nonempty) 1 sub-boxes 1 prod C(a+2,2) 1 empty set convex: True
+2 tau 2 convex vertex sets (nonempty) 3 sub-boxes 3 prod C(a+2,2) 3 empty set convex: True
+4 tau 3 convex vertex sets (nonempty) 6 sub-boxes 6 prod C(a+2,2) 6 empty set convex: True
+6 tau 4 convex vertex sets (nonempty) 9 sub-boxes 9 prod C(a+2,2) 9 empty set convex: True
+8 tau 4 convex vertex sets (nonempty) 10 sub-boxes 10 prod C(a+2,2) 10 empty set convex: True
+12 tau 6 convex vertex sets (nonempty) 18 sub-boxes 18 prod C(a+2,2) 18 empty set convex: True
+16 tau 5 convex vertex sets (nonempty) 15 sub-boxes 15 prod C(a+2,2) 15 empty set convex: True
+18 tau 6 convex vertex sets (nonempty) 18 sub-boxes 18 prod C(a+2,2) 18 empty set convex: True
+30 tau 8 convex vertex sets (nonempty) 27 sub-boxes 27 prod C(a+2,2) 27 empty set convex: True
+36 tau 9 convex vertex sets (nonempty) 36 sub-boxes 36 prod C(a+2,2) 36 empty set convex: True
+48 tau 10 convex vertex sets (nonempty) 45 sub-boxes 45 prod C(a+2,2) 45 empty set convex: True
+60 tau 12 convex vertex sets (nonempty) 54 sub-boxes 54 prod C(a+2,2) 54 empty set convex: True
+72 tau 12 convex vertex sets (nonempty) 60 sub-boxes 60 prod C(a+2,2) 60 empty set convex: True
+210 tau 16 convex vertex sets (nonempty) 81 sub-boxes 81 prod C(a+2,2) 81 empty set convex: True
+X(6): the boundary 4-cycle (4 vertices, 4 edges, no 2-cell) has the same vertex set and 1-skeleton as the full sub-box; it is 1-skeleton-convex but not the full sub-box subcomplex, and not metrically convex (the square's interior is missing).
+
+== §3.3 antipode ==
+antipode maps every cube to a cube; it maps H+(p,k) onto H-(p, a_p-k+1), which differs from H-(p,k) unless 2k = a_p+1
+example N=360, p=2 (a=3): H+(2,1) -> H-(2,3), not H-(2,1)
+
+== §3.4 Moebius as cubical sign ==
+
+== §4 Fourier layer ==
+c_d(n): exponential-sum definition evaluated exactly in Z[x]/(Phi_d) equals von Sterneck and mu formula, d<=120 and d|360, d|900
+4.1 classes, 4.2 gcd-dependence, orthogonality, expansion: N in 1,12,30,360,900 direct; 6300 direct expansion, grouped orthogonality; 30030 grouped
+
+== §5 inter-atom relations ==
+12 18 union convex: False divisibility: False
+30 42 union convex: False divisibility: False
+8 12 union convex: False divisibility: False
+4 12 union convex: True divisibility: True
+6 30 union convex: True divisibility: True
+12 12 union convex: True divisibility: True
+1 30 union convex: True divisibility: True
+10 21 union convex: False divisibility: False
+36 60 union convex: False divisibility: False
+72 90 union convex: False divisibility: False
+
+== §5.1 X(N) (reasoned; finite witnesses) ==
+orientation {H+(p,1) for all p; H- elsewhere} is pairwise consistent (checked on 50 primes) but is principal at no integer; likewise {H+(2,k) for all k}. So 2.3 'admissible choices <-> vertices' needs the DCC/finiteness condition in X(N).
+
+FAILURES: 0
+RESULT: ALL CHECKS PASS

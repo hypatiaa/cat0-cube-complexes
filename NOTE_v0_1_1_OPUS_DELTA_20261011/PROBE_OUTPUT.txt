@@ -1,0 +1,67 @@
+== instrumented full run ==
+failures: 0
+  C1 Euler                     9
+  C1 dim                       9
+  C1 f-vector                  9
+  C1 tau                       9
+  C10 classes                  9
+  C11 expansion                499
+  C11 orthogonality            902
+  C12 exact                    33252
+  C12n numerical               1
+  C2 edge                      478
+  C2 hyperplane                9
+  C3 crossing                  84
+  C4 Sageev                    9
+  C4b Sageev                   214
+  C5 distance                  8643
+  C6 median                    912602
+  C7 interval                  17286
+  C7b box                      5
+  C7b boxes                    5
+  C7b convex                   5
+  C8 antipode                  9
+  C8 fixed                     9
+  C9 inversion                 9
+  C9 sign                      1447
+  C9 support                   1909
+  R1 meet                      7
+  R2 hull                      7
+  R3 union                     7
+  R4 compat                    34
+  R5 hyperplanes               3
+  R5 product                   3
+  R6 full                      3
+  R6 translate                 3
+  pair (12,18) tau(lcm)=9 divisible=False
+  pair (30,42) tau(lcm)=16 divisible=False
+  pair (8,12) tau(lcm)=8 divisible=False
+  pair (360,30030) tau(lcm)=192 divisible=False
+  pair (6,12) tau(lcm)=6 divisible=True
+  pair (30,30030) tau(lcm)=64 divisible=True
+  pair (4,36) tau(lcm)=9 divisible=True
+  C7b cases (tau<=12): [1, 12, 30, 36, 60]
+== negative controls (light run: CASES without 6300, 30030) ==
+  M1 cyclotomic = x^d-1 (no division) caught=True fail-prefixes=[] AssertionError raised ()
+  M2 C12 poly exponent j+n           caught=True fail-prefixes=['C12'] 
+  M3 pdivmod drops last coef update  caught=False fail-prefixes=[] 
+  M4 C7b is_convex always True       caught=True fail-prefixes=['C7b'] 
+  M5 C7b sub_boxes only l=N          caught=True fail-prefixes=['C7b'] 
+  M6 C4b principal orientation shifted caught=True fail-prefixes=['C4b'] 
+  M7 C9 cube dimension +1            caught=True fail-prefixes=['C9'] 
+  M8 C9 cube list drops 2-cubes      caught=True fail-prefixes=['C9'] 
+  M9 R3 old one-direction claim (never convex) caught=True fail-prefixes=['R3'] 
+  M10 R5 enumerated MN cubes perturbed caught=True fail-prefixes=['R5'] 
+  M11 R2 hull stops after one round  caught=True fail-prefixes=['R2'] 
+  M12 C9 inversion uses mu(d) not mu(n/d) caught=True fail-prefixes=['C9'] 
+== independent checks ==
+  cyclotomic d=1..210: deg=phi, monic, prod_{e|d} Phi_e = x^d-1, Phi_d(zeta_d)~0 : bad=0
+  Phi_105 has coefficient -2: True
+  exact Z[x]/Phi_d reduction vs von Sterneck, d | 360,900, n mod d: 3991 cases, bad=0
+  non-constant element x mod Phi_3 -> [0, 1] ; x mod Phi_5 -> [0, 1]
+  pdivmod(x^4, Phi_3) remainder = [0, 1] (expect x i.e. [0,1])
+  X(6) caveat: vertex set convex=True, edges=4, X(6) has the square=True -> 4-cycle w/o square is not full: True
+  3.3 antipode H+(p,k) -> H-(p,a_p-k+1) and dual edges H(p,k)->H(p,a_p-k+1): bad=0
+  F9 principal orientations injective; down-set count = tau: bad=0
+  5.1 proxy in X(302400): ray {2^k} convex=True ; multiples of 6 convex=True
+  F8 j -> jN/M: injective, order kept, image = order | M, values kept: bad=0
