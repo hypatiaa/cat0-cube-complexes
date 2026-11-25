@@ -14,3 +14,14 @@ It is a single self-contained HTML page. Open it in a browser.
 The first planned extension, per O4, is labelling the coincident vertices this drawing already produces, using the note's rule. It waits on the viewer-redesign requirements being adopted, and on saphir's word "build".
 
 An older build, 91a33a49…, dated 2026-09-04, differs only in the Ford-ring radius fix and some comments. Its drawing functions are byte-identical. It is not used here.
+
+## Latest viewer (added 2026-11-25)
+
+`helix_atlas_wl26_phase_replay_v0_4.html`
+sha256 `e8889c05367d94d92fbc18901f4dbe1ce6f04113b2d7c60b31d35798cd6d8362` (14473 lines; dated 2026-11-23)
+
+The atom viewer's "3D path replay v0.4": it compares two Rule 30 pen walks on Div(30). This file is a byte copy of `s6_atom/VIEWERS_LATEST/helix_atlas_wl26_phase_replay_v0_4.html` and is added at saphir's request ("please send the latest viewer to github").
+
+- The frozen base above is unchanged and stays the reference for §7.
+- The §7 statements (the 30030 spine and the 216 and 900900 coincidences) have **not** been re-checked against this newer file.
+- It loads three.js r128 from cdnjs. Everything else is inline.
